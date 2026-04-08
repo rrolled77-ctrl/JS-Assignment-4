@@ -1,0 +1,46 @@
+*Question 1*
+This program counts the number of integers between L and R (inclusive) that do not contain the digit 0, have a digit sum that is a prime number, and are divisible by K. 
+L, R, and K are entered by the user. 
+In order to determine whether the digit sum is prime, the program loops from L to R, examines divisibility using modulo, removes digits to check for zero and compute digit sum, and then checks divisors from 2 to sum-1. 
+Only when every criterion is met does the counter increase, and the ultimate count is shown. 
+O((R-L+1) * d) is the time complexity, where d is the digit count.
+
+*Question 2*
+When given an integer N and a seed value, this program performs a transformation precisely three times: if the current number is even, it divides by two and adds the seed; if it is odd, it multiplies by three and subtracts the seed. 
+Following three stages, it determines whether the final number's middle digit equals the seed and whether it falls between 100 and 999 inclusive. The software uses modulo operations and division to obtain the middle digit. 
+If both conditions are met, "YES, number" is output; if not, "NO, number" is. 
+Because there are just three fixed iterations, the time complexity is O(1).
+
+*Question 3*
+This program determines the smallest non-negative integer X such that N+X is divisible by K and a palindrome number. 
+N and K are entered by the user. 
+The software looks up X between 0 and 100,000. 
+Each candidate's divisibility is checked using modulo, after which the candidate is converted to a string and its palindrome status is ascertained by comparing characters from both ends using the charAt() method. 
+If no X is discovered within the range, -1 is shown; otherwise, the first X that meets both requirements is stored and shown. 
+O(100000 * d) is the time complexity, where d is the digit count.
+
+*Question 4*
+Based on base fare, distance, minutes late, and seed, this program calculates a ride fare. 
+Base + 7×distance is the starting fare. 
+20 is added if minutesLate is more than 15. 
+Ten percent of the current fare (floored) is added if the distance is more than ten. 
+Seed is added if it is even, and subtracted if it is odd. 
+Lastly, by calculating the remainder modulo 5 and adding the difference if necessary, the fee is rounded up to the closest multiple of 5. 
+The ultimate fare is shown when each rule is applied gradually using if statements. 
+O(1) is the time complexity.
+
+*Question 5*
+This program determines the smallest positive integer m such that the total of all the numbers between 1 and m that are not divisible by (seed+2) is at least N. 
+N and seed are entered by the user. 
+After initializing m = 0 and totalSum = 0, the program starts a while loop that keeps running until totalSum equals N. 
+Within the loop, m increases and is added to totalSum if it is not divisible by (seed+2). 
+The software shows m and the calculated sum after the condition is satisfied. 
+Time complexity is O(m), where m is the final result.
+
+*Question 6*
+The formula score = 3a + b - 2c, where a, b, and c are user inputs, is used by this program to determine a contest score. 
+The score is set to 0 if it turns negative. 
+The score is deducted by 10 if the total submissions (a+b+c) exceed 50. 
+After that, the final score is compared to 60; if it is 60 or higher, the status is "PASS"; if not, it is "FAIL". 
+The final score and status are shown by the program, separated by commas. 
+O(1) is the time complexity.
